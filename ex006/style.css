@@ -1,0 +1,14 @@
+@charset "UTF-8";
+body{
+    background-color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+main{
+    width: 600px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: left;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data atual</title>
+</head>
+<body>
+    
+    <script>
+           var agora = new Date()
+           var ano = agora.getFullYear()
+           var mes = agora.getMonth()
+           var diaSem = agora.getUTCDay()
+           var hora = agora.getHours()
+           var minu = agora.getMinutes()
+           var segu = agora.getSeconds()
+           switch(diaSem){
+
+            case 0 :
+                window.document.write(`Hoje é domingo/${mes}/${ano} e são ${hora}:${minu}:${segu} `)
+                break 
+            case 1 : 
+                window.document.write(`Hoje é Segunda-feira/${mes}/${ano} e são ${hora}:${minu}:${segu} `)
+                break
+            case 2 :
+                 window.document.write(`Hoje é Terça-feira/${mes}/${ano} e são ${hora}:${minu}:${segu} `)
+                 break
+            case 3 :
+                 window.document.write(`Hoje é Quarta-feira/${mes}/${ano} e são ${hora}:${minu}:${segu} `)
+                 break
+            case 4 :
+                 window.document.write(`Hoje é Quinta-feira/${mes}/${ano} e são ${hora}:${minu}:${segu} `)
+                 break
+            case 5 :
+                 window.document.write(`Hoje é Sexta-feira/${mes}/${ano} e são ${hora}:${minu}:${segu} `)
+                 break
+            case 6 :
+                 window.document.write(`Hoje é Sábado/${mes}/${ano} e são ${hora}:${minu}:${segu} `)
+                 break
+            
+                 default: 
+           }
+           
+    </script>
+</body>
+</html>

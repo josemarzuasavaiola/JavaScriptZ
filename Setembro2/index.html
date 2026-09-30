@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+html{
+   background-color: lightgray;
+   height: 100vh;
+}
+body{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-image: linear-gradient(to bottom, white, lightgray);
+background-repeat: no-repeat;
+}
+header{
+padding: 5px;
+border-bottom: 2px solid black;
+outline: 2px solid #0073ff;
+/*Para manter o cabeçalho fixo
+position: sticky;
+top: 0;
+z-index: 1;*/
+}
+main{
+  display: grid;
+  grid-template-columns: 5px 1fr 100px 100px 1fr 5px;
+  grid-template-rows: 1fr 50px 50px 50px 50px;
+  gap: 30px;
+  padding: 5px; 
+  height: 85vh;
+}
+#pontua{
+    grid-area: 1/1 / 1/3;
+    display: none;
+}
+#botao{
+    display: block;
+    grid-column: 3 /5;
+    grid-row: 2/3;
+    border-radius: 15px;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+}
+.emcomumb{
+    background-color: white;
+}
+   .emcomumb:hover{
+    cursor: pointer;
+    background-color: #80808064;
+   }
+#regresso{
+    display: none;
+    grid-column: 3 /5;
+    grid-row: 2/3;
+    border-radius: 15px;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+}
+#regresso2{
+    display: none;
+    grid-column: 3 /5;
+    grid-row: 5/6;
+    border-radius: 15px;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+}
+#botao2{
+    grid-column: 3 / 4;
+    grid-row: 2/3;
+    border-radius: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    display: none;
+}
+#botao3{
+    grid-column: 4 / 5;
+    grid-row: 2/3;
+    border-radius: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    display: none;
+}
+#segbotao2{
+    grid-column: 3 / 4;
+    grid-row: 2/3;
+    border-radius: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    display: none;
+}
+#segbotao3{
+    grid-column: 4 / 5;
+    grid-row: 2/3;
+    border-radius: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    display: none;
+}
+#pergunta{
+    grid-column: 2 /6;
+    grid-row: 2/3;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta2{
+    grid-area: 3/2 / 4/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta3{
+    grid-area: 4/2 / 5/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta4{
+    grid-column: 2 /6;
+    grid-row: 2/3;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta5{
+    grid-area: 3/2 / 4/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta6{
+    grid-area: 4/2 / 5/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta7{
+    grid-column: 2 /6;
+    grid-row: 2/3;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta8{
+    grid-area: 3/2 / 4/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta9{
+    grid-area: 4/2 / 5/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta10{
+    grid-column: 2 /6;
+    grid-row: 2/3;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta11{
+    grid-area: 3/2 / 4/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta12{
+    grid-area: 4/2 / 5/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta13{
+    grid-column: 2 /6;
+    grid-row: 2/3;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta14{
+    grid-area: 3/2 / 4/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta15{
+    grid-area: 4/2 / 5/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta16{
+    grid-column: 2 /6;
+    grid-row: 2/3;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta17{
+    grid-area: 3/2 / 4/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta18{
+    grid-area: 4/2 / 5/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta19{
+    grid-column: 2 /6;
+    grid-row: 2/3;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta20{
+    grid-area: 3/2 / 4/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta21{
+    grid-area: 4/2 / 5/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta22{
+    grid-column: 2 /6;
+    grid-row: 2/3;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta23{
+    grid-area: 3/2 / 4/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta24{
+    grid-area: 4/2 / 5/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta25{
+    grid-column: 2 /6;
+    grid-row: 2/3;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta26{
+    grid-area: 3/2 / 4/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta27{
+    grid-area: 4/2 / 5/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta28{
+    grid-column: 2 /6;
+    grid-row: 2/3;
+    font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta29{
+    grid-area: 3/2 / 4/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#pergunta30{
+    grid-area: 4/2 / 5/6;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+/*Secção dos botões próximo*/
+#proximo{
+    grid-area: 5/3 / 6/5;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#proximo2{
+    grid-area: 5/3 / 6/5;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#proximo3{
+    grid-area: 5/3 / 6/5;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#proximo4{
+    grid-area: 5/3 / 6/5;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#proximo5{
+    grid-area: 5/3 / 6/5;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#proximo6{
+    grid-area: 5/3 / 6/5;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#proximo7{
+    grid-area: 5/3 / 6/5;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#proximo8{
+    grid-area: 5/3 / 6/5;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#proximo9{
+    grid-area: 5/3 / 6/5;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#proximo10{
+    grid-area: 5/3 / 6/5;
+     font-size: 14pt;
+    font-weight: bold;
+    outline: 2px solid #0073ff;
+    border-radius: 10px;
+    display: none; 
+}
+#texto{
+    grid-column: 1 / 7;
+    grid-row: 1/ 2;
+    border-radius: 50%;
+    background-color: #ffff00b9;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50px 1fr  50px;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 8px solid white;
+    outline: 8px solid #0073ff;
+}
+#texto1{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: center;
+    font-size: 18pt;
+}
+footer{
+    text-align: center;
+    font-size: 14pt;
+    padding: 5px;
+}
+@media screen and (min-width: 768px ) {
+    
+    main{
+        grid-template-rows: 50px 50px 50px 50px 50px 50px 1fr;
+        grid-template-columns: 5px 1fr 100px 100px 100px 1fr;
+    }
+    #pontua{
+        grid-area: 1/4 / 2/5;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+   #texto{
+    grid-area: 2/1 / 7/3;
+    width: 350px;
+    height: 350px;
+   }
+   #botao{
+    grid-area: 4/4 / 5/6;
+   }
+   #botao2{
+    grid-area: 4/4 / 5/5;
+   }
+   #botao3{
+    grid-area: 4/5 / 5/6;
+   }
+   #segbotao2{
+    grid-area: 4/4 / 5/5;
+   }
+   #segbotao3{
+    grid-area:  4/5 / 5/6;
+   }
+   #pergunta{
+    grid-area: 3/3 / 4/7;
+
+   }
+   #pergunta2{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta3{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta4{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta5{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta6{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta7{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta8{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta9{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta10{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta11{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta12{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta13{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta14{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta15{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta16{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta17{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta18{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta19{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta20{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta21{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta22{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta23{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta24{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta25{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta26{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta27{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta28{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta29{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta30{
+    grid-area: 5/3 / 6/7;
+   }
+
+
+   /*Área dos próximos*/
+
+   #proximo{
+    grid-area: 6/3 / 7/5;
+   }
+    #proximo2{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo3{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo4{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo5{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo6{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo7{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo8{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo9{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo10{
+    grid-area: 6/3 / 7/5;
+   }
+   /*Regresso*/
+   #regresso{
+    grid-area: 4/4 / 5/6;
+   }
+   #regresso2{
+    grid-area: 6/3 / 7/5;
+   }
+ }
+    </style>
+    <title>ZuaAmarelo</title>
+</head>
+<body>
+    <header>
+        <h1>ZuaAmarelo</h1>
+    </header>
+
+    <main>
+        <div id="pontua">
+            <p>
+               Pontuação: 0/10
+            </p>
+        </div>
+
+        <div id="texto">
+            <p 
+                id="texto1">A saúde mental é um factor importante, mesmo parecendo estar distante
+            </p>
+        </div>
+
+        <input type="button" value="Começar" id="botao" onclick="clicoubotao()">
+        <input type="button" value="Sim" id="botao2" onclick="estoubem()">
+        <input type="button" value="Não" id="botao3" onclick="naoestoubem()"><!--Em falta, a negação-->
+        <input type="button" value="Sim" id="segbotao2" onclick="aceito()">
+        <input type="button" value="Não" id="segbotao3" onclick="naoaceito()"> 
+
+        <input type="button" value="Voltar ao início" id="regresso" onclick="volte()">
+        <input type="button" value="Voltar ao início" id="regresso2" onclick="volte2()">
+
+         <!--Respostas-->
+        <input type="button" value="Rir dessa pessoa" id="pergunta" onclick="errado1()" class="emcomumb">
+        <input type="button" value="Postar nas Redes Sociais" id="pergunta2" onclick="errado2()" class="emcomumb">
+        <input type="button" value="Ficar ao lado dela e lhe dar apoio" id="pergunta3" onclick="perguntacerta()" class="emcomumb">
+
+        <!--Avançar1-->
+        <input type="button" value="Próximo ⇛" id="proximo" onclick="avancar()">
+
+        <!--Respostas2-->
+        <input type="button" value="Que absurdo, é claro que não!" id="pergunta4" onclick="perguntacerta1()" class="emcomumb"> 
+        <input type="button" value="Concerteza, sou eu" id="pergunta5" onclick="errado3()" class="emcomumb">
+        <input type="button" value="Claro que existe" id="pergunta6" onclick="errado4()" class="emcomumb">
+
+        <!--Avançar2-->
+        <input type="button" value="Próximo ⇛" id="proximo2" onclick="avancar2()">
+
+        <!--Respostas3-->
+        <input type="button" value="Cumprimentá-lo sempre que o vir" id="pergunta7" onclick="errado5()" class="emcomumb">
+        <input type="button" value="Incluindo ele em coisas positivas" id="pergunta8" onclick="errado6()" class="emcomumb">
+        <input type="button" value="Sofrer buling na escola." id="pergunta9" onclick="perguntacerta2()" class="emcomumb">
+
+        <!--Avançar3-->
+        <input type="button" value="Próximo ⇛" id="proximo3" onclick="avancar3()">
+
+        <!--Respostas4-->
+        <input type="button" value="Rir de quem não consegue falar" id="pergunta10" onclick="errado7()" class="emcomumb">
+        <input type="button" value="Ficar atento ao que os outros falam" id="pergunta11"  onclick="perguntacerta3()" class="emcomumb">
+        <input type="button" value="Falar enquanto os outros falam" id="pergunta12" onclick="errado8()" class="emcomumb">
+
+        <!--Avançar4-->
+        <input type="button" value="Próximo ⇛" id="proximo4" onclick="avancar4()">
+
+        <input type="button" value="No fundo" id="pergunta13" onclick="errado9()" class="emcomumb">
+        <input type="button" value="Na frente" onclick="perguntacerta4()" id="pergunta14" class="emcomumb">
+        <input type="button" value="Á parede" id="pergunta15" onclick="errado10()" class="emcomumb">
+
+        <!--Avançar5-->
+        <input type="button" value="Próximo ⇛" id="proximo5" onclick="avancar5()">
+
+        <input type="button" value="É claro que são os da frente" id="pergunta16" onclick="errado11()" class="emcomumb">
+        <input type="button" value="Aqueles que se sentam no fundo" id="pergunta17" onclick="errado12()" class="emcomumb">
+        <input type="button" value="Todos aqueles que se aplicam" onclick="perguntacerta5()" id="pergunta18" class="emcomumb">
+
+        <!--Avança6-->
+        <input type="button" value="Próximo ⇛" id="proximo6" onclick="avancar6()">
+
+        <input type="button" value="Sem dúvidas é o Delegado" id="pergunta19" onclick="errado13()" class="emcomumb">
+        <input type="button" value="Todo aluno consciente" id="pergunta20" onclick="perguntacerta6()" class="emcomumb">
+        <input type="button" value="O professor de Educação Física" id="pergunta21" onclick="errado14()" class="emcomumb">
+
+        <!--Avança7-->
+        <input type="button" value="Próximo ⇛" id="proximo7" onclick="avancar7()">
+
+        <input type="button" value="Fugir" id="pergunta22" onclick="errado15()" class="emcomumb">
+        <input type="button" value="Esperar pelo director/a" id="pergunta23" onclick="errado16()" class="emcomumb">
+        <input type="button" value="Socorrer ele/a" id="pergunta24" onclick="perguntacerta7()" class="emcomumb">
+        
+         <!--Avança8-->
+        <input type="button" value="Próximo ⇛" id="proximo8" onclick="avancar8()">
+
+        <input type="button" value="Respondedor de perguntas" id="pergunta25" onclick="errado17()" class="emcomumb">
+        <input type="button" value="Promotor da paz e do respeito" id="pergunta26" onclick="perguntacerta8()" class="emcomumb">
+        <input type="button" value="O que onfende seus colegas" id="pergunta27" onclick="errado18()" class="emcomumb">
+
+        <!--Avança9-->
+        <input type="button" value="Próximo ⇛" id="proximo9" onclick="avancar9()">
+
+        <input type="button" value="Portão está aberto, bazei" id="pergunta28" onclick="perguntacerta9()" class="emcomumb">
+        <input type="button" value="Vamos esperar o professor" id="pergunta29" onclick="errado19()" class="emcomumb">
+        <input type="button" value="Tira o papel, o prof foi" id="pergunta30" onclick="errado20()" class="emcomumb">
+
+        <!--Avança10-->
+        <input type="button" value="Avançar ⇛" id="proximo10" onclick="avancar10()">
+    </main>
+
+    <footer>
+         &circledR;Josemar Zua Savaiola &copy;2026
+    </footer>
+    
+    <script>
+           var pontuacao = document.getElementById('pontua')
+        var texinicial = document.getElementById('texto1')
+        var botao1 = document.getElementsByTagName('input')[0]
+        var nome = window.prompt('Como é o seu nome?')
+        function clicoubotao(){
+          texinicial.innerHTML = `Sente- se bem, ${nome}?`
+          if(botao.style.display == 'none' && botao2.style.display == 'block' && botao3.style.display == 'block'){
+            botao.style.display = 'block'
+            botao2.style.display ='none'
+            botao3.style.display = 'none'
+          }else{
+            botao.style.display = 'none'
+            botao2.style.display = 'block'
+            botao3.style.display = 'block'
+          }
+          pontuacao.style.display = 'none'
+          pontuacao.innerHTML = 'Pontuação: 0/10'
+    }
+    function estoubem(){
+        texinicial.innerHTML = `Então podemos começar o Quiz, ${nome}?`
+        if(botao2.style.display == 'block' && botao3.style.display == 'block'){
+            botao2.style.display = 'none'
+            botao3.style.display = 'none'
+            segbotao2.style.display ='block' 
+            segbotao3.style.display = 'block'
+        }
+    }
+    function naoestoubem(){
+        texinicial.innerHTML = `O que foi ${nome}, tu podes falar com os teus amigos ou a tua família, não passes por isso só`
+        botao2.style.display = 'none' 
+        botao3.style.display = 'none' 
+        regresso.style.display = 'block'
+    }
+    function aceito(){
+        texinicial.innerHTML = `1. ${nome}, o que fazer quando uma pessoa está sofrendo?`
+        if(segbotao2.style.display == 'block' && segbotao3.style.display == 'block'){
+            segbotao2.style.display = 'none' 
+            segbotao3.style.display = 'none' 
+            pergunta.style.display = 'block' 
+            pergunta2.style.display = 'block'
+            pergunta3.style.display = 'block'
+        }
+        pontuacao.style.display = 'block'
+        pontuacao.innerHTML = 'Pontuação: 0/10'
+    }
+    function naoaceito(){
+        texinicial.innerHTML = `X__X <p>Que pena ${nome}, você desistiu</p>`
+        segbotao2.style.display = 'none'
+        segbotao3.style.display = 'none'
+        regresso.style.display = 'block'
+    }
+    function volte(){
+       texinicial.style.fontSize = '18pt' 
+       texinicial.innerHTML = `Não precisas descubrir tudo sozinho, podes pedir ajuda ${nome}`
+       regresso.style.display = 'none'
+       botao.style.display = 'block'   
+       pontuacao.style.display = 'none'
+    }
+    function volte2(){
+       texinicial.style.fontSize = '18pt' 
+       texinicial.innerHTML = `${nome}, o maior tesouro é ter quem nós amamos ao nosso lado`
+       regresso2.style.display = 'none'
+       botao.style.display = 'block'  
+       pergunta.style.display = 'none'
+       pergunta2.style.display = 'none'
+       pergunta3.style.display = 'none'
+       pergunta4.style.display = 'none'
+       pergunta5.style.display = 'none'
+       pergunta6.style.display = 'none'
+       pergunta7.style.display = 'none'
+       pergunta8.style.display = 'none'
+       pergunta9.style.display = 'none'
+       pergunta10.style.display = 'none'
+       pergunta11.style.display = 'none'
+       pergunta12.style.display = 'none'
+       pergunta13.style.display = 'none'
+       pergunta14.style.display = 'none'
+       pergunta15.style.display = 'none'
+       pergunta16.style.display = 'none'
+       pergunta17.style.display = 'none'
+       pergunta18.style.display = 'none'
+       pergunta19.style.display = 'none'
+       pergunta20.style.display = 'none'  
+       pergunta21.style.display = 'none'
+       pergunta22.style.display = 'none'
+       pergunta23.style.display = 'none'
+       pergunta24.style.display = 'none'
+       pergunta25.style.display = 'none'
+       pergunta26.style.display = 'none'
+       pergunta27.style.display = 'none'
+       pergunta28.style.display = 'none'
+       pergunta29.style.display = 'none'
+       pergunta30.style.display = 'none'     
+       
+       pergunta.style.backgroundColor = 'white'
+       pergunta2.style.backgroundColor = 'white'
+       pergunta3.style.backgroundColor = 'white'
+       pergunta4.style.backgroundColor = 'white'
+       pergunta5.style.backgroundColor = 'white'
+       pergunta6.style.backgroundColor = 'white'
+       pergunta7.style.backgroundColor = 'white'
+       pergunta8.style.backgroundColor = 'white'
+       pergunta9.style.backgroundColor = 'white'
+       pergunta10.style.backgroundColor = 'white'
+       pergunta11.style.backgroundColor = 'white'
+       pergunta12.style.backgroundColor = 'white'
+       pergunta13.style.backgroundColor = 'white'
+       pergunta14.style.backgroundColor = 'white'
+       pergunta15.style.backgroundColor = 'white'
+       pergunta16.style.backgroundColor = 'white'
+       pergunta17.style.backgroundColor = 'white'
+       pergunta18.style.backgroundColor = 'white'
+       pergunta19.style.backgroundColor = 'white'
+       pergunta20.style.backgroundColor = 'white'  
+       pergunta21.style.backgroundColor = 'white'
+       pergunta22.style.backgroundColor = 'white'
+       pergunta23.style.backgroundColor = 'white'
+       pergunta24.style.backgroundColor = 'white'
+       pergunta25.style.backgroundColor = 'white'
+       pergunta26.style.backgroundColor = 'white'
+       pergunta27.style.backgroundColor = 'white'
+       pergunta28.style.backgroundColor = 'white'
+       pergunta29.style.backgroundColor = 'white'
+       pergunta30.style.backgroundColor = 'white'     
+    }
+    /*Secção das respostas certas*/
+    function perguntacerta(){
+        pergunta3.style.backgroundColor = 'green'
+        texinicial.innerHTML = '✅Certo!'
+        texinicial.style.fontSize = '30pt'
+        if(pergunta3.style.display == 'block'){
+            proximo.style.display = 'block'
+        }
+        pergunta.style.display = 'none'
+        pergunta2.style.display = 'none'
+        pontua.style.display ='block'
+        pontuacao.innerHTML = 'Pontuação: 1/10'
+        
+    }
+     function perguntacerta1(){
+        pergunta4.style.backgroundColor = 'green'
+        texinicial.innerHTML = '✅Certo!'
+        texinicial.style.fontSize = '30pt'
+        proximo2.style.display = 'block'
+
+        pergunta5.style.display = 'none'
+        pergunta6.style.display = 'none'
+         pontuacao.innerHTML = 'Pontuação: 2/10'
+    }
+    function perguntacerta2(){
+        pergunta9.style.backgroundColor = 'green'
+        texinicial.innerHTML = '✅Certo!'
+        texinicial.style.fontSize = '30pt'
+        proximo3.style.display = 'block' 
+
+        pergunta7.style.display = 'none'
+        pergunta8.style.display = 'none'
+         pontuacao.innerHTML = 'Pontuação: 3/10'
+    }
+    function perguntacerta3(){
+        pergunta11.style.backgroundColor = 'green'
+        texinicial.innerHTML = '✅Certo!'
+        texinicial.style.fontSize = '30pt'
+        proximo4.style.display = 'block'
+        
+        pergunta10.style.display = 'none'
+        pergunta12.style.display = 'none'
+         pontuacao.innerHTML = 'Pontuação: 4/10'
+    }
+    function perguntacerta4(){
+        pergunta14.style.backgroundColor = 'green'
+        texinicial.innerHTML = '✅Certo!'
+        texinicial.style.fontSize = '30pt'
+        proximo5.style.display = 'block'
+        
+        pergunta13.style.display = 'none'
+        pergunta15.style.display = 'none'
+        pontuacao.innerHTML = 'Pontuação: 5/10'
+    }
+    function perguntacerta5(){
+        pergunta18.style.backgroundColor = 'green'
+        texinicial.innerHTML = '✅Certo!'
+        texinicial.style.fontSize = '30pt'
+        proximo6.style.display = 'block' 
+
+        pergunta16.style.display = 'none'
+        pergunta17.style.display = 'none'
+        pontuacao.innerHTML = 'Pontuação: 6/10'
+    }
+     function perguntacerta6(){
+        pergunta20.style.backgroundColor = 'green'
+        texinicial.innerHTML = '✅Certo!'
+        texinicial.style.fontSize = '30pt'
+        proximo7.style.display = 'block'
+        
+        pergunta19.style.display = 'none'
+        pergunta21.style.display = 'none'
+        pontuacao.innerHTML = 'Pontuação: 7/10'
+    }
+    function perguntacerta7(){
+        pergunta24.style.backgroundColor = 'green'
+        texinicial.innerHTML = '✅Certo!'
+        texinicial.style.fontSize = '30pt'
+        proximo8.style.display = 'block' 
+
+        pergunta22.style.display = 'none'
+        pergunta23.style.display = 'none'
+        pontuacao.innerHTML = 'Pontuação: 8/10'
+    }
+    function perguntacerta8(){
+        pergunta26.style.backgroundColor = 'green'
+        texinicial.innerHTML = '✅Certo!'
+        texinicial.style.fontSize = '30pt'
+        proximo9.style.display = 'block' 
+
+        pergunta25.style.display = 'none'
+        pergunta27.style.display = 'none'
+        pontuacao.innerHTML = 'Pontuação: 9/10'
+    }
+    function perguntacerta9(){
+        pergunta28.style.backgroundColor = 'green'
+        texinicial.innerHTML = '✅Certo'
+        texinicial.style.fontSize = '30pt'
+        proximo10.style.display = 'block' 
+
+        pergunta29.style.display = 'none'
+        pergunta30.style.display = 'none'
+        pontuacao.innerHTML = 'Pontuação: 10/10'
+    }
+    /*Secção das botões próximo*/
+    function avancar(){
+        texinicial.style.fontSize = '18pt'
+        pergunta.style.display = 'none' 
+        pergunta2.style.display = 'none'
+        pergunta3.style.display = 'none'
+        texinicial.innerHTML = `2. ${nome}, existe a pessoa mais importante do mundo?`
+        proximo.style.display = 'none'
+        pergunta4.style.display = 'block' 
+        pergunta5.style.display = 'block'
+        pergunta6.style.display = 'block'
+        
+    }
+    function avancar2(){
+        texinicial.style.fontSize = '18pt'
+        pergunta4.style.display = 'none' 
+        pergunta5.style.display = 'none'
+        pergunta6.style.display = 'none'
+        texinicial.innerHTML = `3. ${nome}, qual dessas razões pode levar um aluno ou aluna à depressão?`
+        proximo2.style.display = 'none'
+        pergunta7.style.display = 'block' 
+        pergunta8.style.display = 'block'
+        pergunta9.style.display = 'block'
+    }
+    function avancar3(){
+        texinicial.style.fontSize = '18pt'
+        pergunta7.style.display = 'none' 
+        pergunta8.style.display = 'none'
+        pergunta9.style.display = 'none'
+        texinicial.innerHTML = `4. ${nome}, qual dessas opções contribui para a inclusão dos alunos na sala de aula?`
+        proximo3.style.display = 'none'
+        pergunta10.style.display = 'block' 
+        pergunta11.style.display = 'block'
+        pergunta12.style.display = 'block'
+    }
+     function avancar4(){
+        texinicial.style.fontSize = '18pt'
+        pergunta10.style.display = 'none' 
+        pergunta11.style.display = 'none'
+        pergunta12.style.display = 'none'
+        texinicial.innerHTML = `5. ${nome}, sabendo que o lugar onde tu sentas na escola pode decidir o teu futuro, qual é o melhor lugar para se sentar na escola?`
+        proximo4.style.display = 'none'
+        pergunta13.style.display = 'block' 
+        pergunta14.style.display = 'block'
+        pergunta15.style.display = 'block'
+    }
+     function avancar5(){
+        texinicial.style.fontSize = '18pt'
+        pergunta13.style.display = 'none' 
+        pergunta14.style.display = 'none'
+        pergunta15.style.display = 'none'
+        texinicial.innerHTML = `6. ${nome}, quem são os melhores alunos da turma?`
+        proximo5.style.display = 'none'
+        pergunta16.style.display = 'block' 
+        pergunta17.style.display = 'block'
+        pergunta18.style.display = 'block'
+    }
+    function avancar6(){
+        texinicial.style.fontSize = '18pt'
+        pergunta16.style.display = 'none' 
+        pergunta17.style.display = 'none'
+        pergunta18.style.display = 'none'
+        texinicial.innerHTML = `7. ${nome}, quem é o Responsável pela promoção da paz na sala aula?`
+        proximo6.style.display = 'none'
+        pergunta19.style.display = 'block' 
+        pergunta20.style.display = 'block'
+        pergunta21.style.display = 'block'
+    }
+    function avancar7(){
+        texinicial.style.fontSize = '18pt'
+        pergunta19.style.display = 'none' 
+        pergunta20.style.display = 'none'
+        pergunta21.style.display = 'none'
+        texinicial.innerHTML = `8. ${nome}, se algum colega ou alguma colega desmaiar na sala de aula, o que deves fazer?`
+        proximo7.style.display = 'none'
+        pergunta22.style.display = 'block' 
+        pergunta23.style.display = 'block'
+        pergunta24.style.display = 'block'
+    }
+    function avancar8(){
+        texinicial.style.fontSize = '18pt'
+        pergunta22.style.display = 'none' 
+        pergunta23.style.display = 'none'
+        pergunta24.style.display = 'none'
+        texinicial.innerHTML = `9. ${nome}, qual destas opções define um bom aluno`
+        proximo8.style.display = 'none'
+        pergunta25.style.display = 'block' 
+        pergunta26.style.display = 'block'
+        pergunta27.style.display = 'block'
+    }
+    function avancar9(){
+        texinicial.style.fontSize = '18pt'
+        pergunta25.style.display = 'none' 
+        pergunta26.style.display = 'none'
+        pergunta27.style.display = 'none'
+        texinicial.innerHTML = `10. ${nome}, qual destas frases é mais falada numa sala sem professor?`
+        proximo9.style.display = 'none'
+        pergunta28.style.display = 'block' 
+        pergunta29.style.display = 'block'
+        pergunta30.style.display = 'block'
+    }
+     function avancar10(){
+        texinicial.style.fontSize = '24pt'
+        pergunta28.style.display = 'none' 
+        pergunta29.style.display = 'none'
+        pergunta30.style.display = 'none'
+        texinicial.innerHTML = `Execelente, ${nome} você é muito inteligente`
+        proximo10.style.display = 'none'
+        regresso.style.display = 'block'
+         pergunta.style.backgroundColor = 'white'
+       pergunta2.style.backgroundColor = 'white'
+       pergunta3.style.backgroundColor = 'white'
+       pergunta4.style.backgroundColor = 'white'
+       pergunta5.style.backgroundColor = 'white'
+       pergunta6.style.backgroundColor = 'white'
+       pergunta7.style.backgroundColor = 'white'
+       pergunta8.style.backgroundColor = 'white'
+       pergunta9.style.backgroundColor = 'white'
+       pergunta10.style.backgroundColor = 'white'
+       pergunta11.style.backgroundColor = 'white'
+       pergunta12.style.backgroundColor = 'white'
+       pergunta13.style.backgroundColor = 'white'
+       pergunta14.style.backgroundColor = 'white'
+       pergunta15.style.backgroundColor = 'white'
+       pergunta16.style.backgroundColor = 'white'
+       pergunta17.style.backgroundColor = 'white'
+       pergunta18.style.backgroundColor = 'white'
+       pergunta19.style.backgroundColor = 'white'
+       pergunta20.style.backgroundColor = 'white'  
+       pergunta21.style.backgroundColor = 'white'
+       pergunta22.style.backgroundColor = 'white'
+       pergunta23.style.backgroundColor = 'white'
+       pergunta24.style.backgroundColor = 'white'
+       pergunta25.style.backgroundColor = 'white'
+       pergunta26.style.backgroundColor = 'white'
+       pergunta27.style.backgroundColor = 'white'
+       pergunta28.style.backgroundColor = 'white'
+       pergunta29.style.backgroundColor = 'white'
+       pergunta30.style.backgroundColor = 'white'
+    }
+    <!--Secção das respostas erradas-->
+
+    function errado1(){
+        pergunta.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta2.style.display = 'none'
+        pergunta3.style.display = 'none'
+    }
+    function errado2(){
+        pergunta2.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta.style.display = 'none'
+        pergunta3.style.display = 'none'
+    }
+    function errado3(){
+        pergunta5.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta4.style.display = 'none'
+        pergunta6.style.display = 'none'
+    }
+    function errado4(){
+        pergunta6.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta4.style.display = 'none'
+        pergunta5.style.display = 'none'
+    }
+    function errado5(){
+        pergunta7.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta8.style.display = 'none'
+        pergunta9.style.display = 'none'
+    }
+    function errado6(){
+        pergunta8.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta7.style.display = 'none'
+        pergunta9.style.display = 'none'
+    }
+    function errado7(){
+        pergunta10.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta11.style.display = 'none'
+        pergunta12.style.display = 'none'
+    }
+    function errado8(){
+        pergunta12.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta10.style.display = 'none'
+        pergunta11.style.display = 'none'
+    }
+    function errado9(){
+        pergunta13.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta14.style.display = 'none'
+        pergunta15.style.display = 'none'
+    }
+    function errado10(){
+        pergunta15.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta13.style.display = 'none'
+        pergunta14.style.display = 'none'
+    }
+    function errado11(){
+        pergunta16.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta17.style.display = 'none'
+        pergunta18.style.display = 'none'
+    }
+    function errado12(){
+        pergunta17.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta16.style.display = 'none'
+        pergunta18.style.display = 'none'
+    }
+    function errado13(){
+        pergunta19.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta20.style.display = 'none'
+        pergunta21.style.display = 'none'
+    }
+    function errado14(){
+        pergunta21.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta19.style.display = 'none'
+        pergunta20.style.display = 'none'
+    }
+    function errado15(){
+        pergunta22.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta23.style.display = 'none'
+        pergunta24.style.display = 'none'
+    }
+    function errado16(){
+        pergunta23.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta22.style.display = 'none'
+        pergunta24.style.display = 'none'
+    }
+    function errado17(){
+        pergunta25.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta26.style.display = 'none'
+        pergunta27.style.display = 'none'
+    }
+    function errado18(){
+        pergunta27.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção erada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta25.style.display = 'none'
+        pergunta26.style.display = 'none'
+    }
+    function errado19(){
+        pergunta29.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta28.style.display = 'none'
+        pergunta30.style.display = 'none'
+    }
+    function errado20(){
+        pergunta30.style.backgroundColor = 'red'
+        texinicial.innerHTML = `❌<p>Opção errada</p>`
+        texinicial.style.fontSize = '30pt'
+        regresso2.style.display = 'block'
+        pergunta28.style.display = 'none'
+        pergunta29.style.display = 'none'
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+@media screen and (min-width: 768px ) {
+    
+    main{
+        grid-template-rows: 50px 50px 50px 50px 50px 50px 1fr;
+        grid-template-columns: 5px 1fr 100px 100px 100px 1fr;
+    }
+    #pontua{
+        grid-area: 1/4 / 2/5;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+   #texto{
+    grid-area: 2/1 / 7/3;
+    width: 350px;
+    height: 350px;
+   }
+   #botao{
+    grid-area: 4/4 / 5/6;
+   }
+   #botao2{
+    grid-area: 4/4 / 5/5;
+   }
+   #botao3{
+    grid-area: 4/5 / 5/6;
+   }
+   #segbotao2{
+    grid-area: 4/4 / 5/5;
+   }
+   #segbotao3{
+    grid-area:  4/5 / 5/6;
+   }
+   #pergunta{
+    grid-area: 3/3 / 4/7;
+
+   }
+   #pergunta2{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta3{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta4{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta5{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta6{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta7{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta8{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta9{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta10{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta11{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta12{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta13{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta14{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta15{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta16{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta17{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta18{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta19{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta20{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta21{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta22{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta23{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta24{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta25{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta26{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta27{
+    grid-area: 5/3 / 6/7;
+   }
+    #pergunta28{
+    grid-area: 3/3 / 4/7;
+   }
+   #pergunta29{
+    grid-area: 4/3 / 5/7;
+   }
+   #pergunta30{
+    grid-area: 5/3 / 6/7;
+   }
+
+
+   /*Área dos próximos*/
+
+   #proximo{
+    grid-area: 6/3 / 7/5;
+   }
+    #proximo2{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo3{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo4{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo5{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo6{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo7{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo8{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo9{
+    grid-area: 6/3 / 7/5;
+   }
+   #proximo10{
+    grid-area: 6/3 / 7/5;
+   }
+   /*Regresso*/
+   #regresso{
+    grid-area: 4/4 / 5/6;
+   }
+   #regresso2{
+    grid-area: 6/3 / 7/5;
+   }
+ }
+

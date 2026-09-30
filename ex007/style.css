@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+body{
+    background-color: #08925a;
+}
+header{
+    color: white;
+    text-align: center;
+}article{
+    border: 2px dashed green;
+    padding: 5px;
+}
+main{
+    display: flex ;
+}
+#section{
+    width: 620px;
+    background-color: #ffffffec;
+    background-image: linear-gradient(to bottom,  #ffffffec, rgb(186, 185, 185));
+    border-radius: 20px;
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 1px 3px 3px #00000071;
+}
+div{
+    margin: auto;
+}
+#texto{
+    width: 300px;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+img{
+   width: 250px;
+   height: 250px; 
+   border-radius: 50%;
+   border: 3px dashed rgb(0, 136, 255);
+}
+footer{
+    text-align: center;
+}
+.ceta{
+ border: 1px solid black; 
+ margin-bottom: 2px;  
+ border-radius: 50%;
+ height: 30px;
+ width: 30px;
+ text-align: center;
+ padding: 5px;
+ background-color: aqua;
+}
+.ceta1{
+ border: 1px solid #00a2ff; 
+ margin-bottom: 2px;  
+ border-radius: 50%;
+ height: 30px;
+ width: 30px;
+ text-align: center;
+ padding: 5px;
+ background-color: #000000;
+ color: #ff0000;
+ display: inline-block;
+}
+.ceta1:hover{
+    background-color: #670505;
+    color: #000000;
+}
+.ceta:hover{
+    color: #ff0000;
+  width: 32px;
+}
+#h1{
+    width: 45px;
+}
+abbr{
+    text-decoration: none;
+}
+audio{
+    height: 30px;
+}
+#notificacao{
+    width: 500px;
+  
+}
+ #apelo{
+    border: none;
+    border-radius: 0;
+    background-color: aqua;
+    width: 500px;
+}
+#apelo1{
+    display: none;
+}
+/*
+#confirmacao{
+background-color: #065636;
+width: 60px;
+padding: 10px;
+border-radius: 8px;
+text-align: center;
+color: white;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin: auto;
+border: 1px solid black;
+}
+
+#confirmacao:hover{
+color: black;
+background-color: #0bcf81;
+background-image: linear-gradient(to bottom,#0bcf81, white );
+border: 1px solid black;
+}
+*

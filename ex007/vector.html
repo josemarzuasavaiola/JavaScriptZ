@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Destinos</title>
+</head>
+<body onload="notificacao()">
+    <header>
+        <h1>Angola</h1>
+    </header>
+    <main>
+        <section id="section">
+            <div id="texto">
+                <br>
+                <p>
+                    <strong>Angola</strong> é uma país cheio de encantos e recantos, então selecionei aqui alguns lugares e paisagens belas que caracterizam <strong>Angola</strong> no que o túrismo diz respeito. <br><br><br><br><br><br>
+                    <audio src="som.MP3" controls title="Angola"></audio>
+                    <article>
+                        Site acessado em:
+                    </article>
+                </p>
+            </div>
+            <div id="foto">
+                <img src="destinos.jpg" alt="destino">
+            </div>
+            <h1 id="h1">
+                <strong>
+                    <section class="ceta" onclick="proximo()">⇑</section>
+                    <section class="ceta" onclick="anterior()">⇑</section>
+                    <section class="ceta" onclick="seguinte()">⇑</section>
+                    <section class="ceta" onclick="sucessor()">⇑</section>
+                    <section class="ceta" onclick="antecessor()">⇑</section>
+                    <abbr title="Atualizar">
+                        <section class="ceta1" onclick="pai()">↻</section>
+                    </abbr>
+                </strong>
+            </h1>
+        </section>
+       <!--<section id="notificacao">
+            <div id="apelo1">
+                <img src="notification.PNG" alt="notification" id="apelo">
+                 <p onclick="confirmacao()" id="confirmacao">Entendi!</p>
+            </div>
+        </section>--> 
+    </main>
+    <footer>
+        <h2>&copy; Josemar Zua Savaiola</h2>
+    </footer>
+    <script src="paginas.js"></script>
+    <script>
+        function confirmacao(){
+            if(apelo1.style.display == 'none'){
+                apelo1.style.display = 'block'
+            }else{
+                apelo1.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>
